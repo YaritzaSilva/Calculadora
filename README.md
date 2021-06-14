@@ -47,7 +47,7 @@ Selecione "0" para sair do programa
 
 ## Download
 
-[🔽 Baixar o programa](dist/Calculadora.zip)
+[🔽 Baixar o programa](https://github.com/YaritzaSilva/Calculadora/raw/main/dist/Calculadora.zip)
 
 ## Sobre 
 
