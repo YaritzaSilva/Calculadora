@@ -5,6 +5,7 @@ Este programa exibe um menu com opções para cálculos matemáticos básicos. O
 ## Funções
 
 Realiza cálculos básicos, como:
+
 • Soma
 • Subtração
 • Divisão
