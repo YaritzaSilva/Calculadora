@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace retangulos
 {
@@ -7,8 +7,10 @@ namespace retangulos
         static void Main(string[] args)
         {
             string opção = "";
-                Console.Clear();
-
+            bool sair = false;
+            Console.Clear();
+            do
+            {
                 Console.WriteLine("-- PROJETO CALCULADORA --");
                 Console.WriteLine(" ");
                 Console.WriteLine("1- Soma");
@@ -27,145 +29,145 @@ namespace retangulos
                 opção = Console.ReadLine();
 
                 switch (opção.ToUpper())
-            {
-                case "1":
+                {
+                    case "1":
 
-                ExibeSoma();
-                break;
+                        ExibeSoma();
+                        break;
 
-                case "2":
-    
-                ExibeSubtração();
-                break;
-            
-                case "3":
-                
-                ExibeDivisão();
-                break;
+                    case "2":
 
-                case "4":
-                
-                ExibeMultiplicação();
-                break;
+                        ExibeSubtração();
+                        break;
 
-                case "5":
-                
-                ExibeExponenciação();
-                break;
+                    case "3":
 
-                case "6":
-                
-                ExbibeRadiciação();
-                break;
+                        ExibeDivisão();
+                        break;
 
-                case "7":
+                    case "4":
 
-                ExibeBhaskara();
-                break;
+                        ExibeMultiplicação();
+                        break;
 
-                case "8":
+                    case "5":
 
-                ExibeMedia();
-                break;
+                        ExibeExponenciação();
+                        break;
 
-                case "0":
+                    case "6":
 
-                ExibeSair();
-                break;
+                        ExbibeRadiciação();
+                        break;
 
-                case "S":
-                
-                ExibeSobre();
-                break;
+                    case "7":
 
-                default:
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Opção inválida!");
-                Console.ResetColor();
-                Environment.Exit(1);
-                break;
-            }
+                        ExibeBhaskara();
+                        break;
+
+                    case "8":
+
+                        ExibeMedia();
+                        break;
+
+                    case "0":
+
+                        sair = ExibeSair();
+                        break;
+
+                    case "S":
+
+                        ExibeSobre();
+                        break;
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Opção inválida!");
+                        Console.ResetColor();
+                        break;
+                }
+            } while (!sair);
         }
         static void ExibeOpções()
         {
             string opção = "";
-                Console.Clear();
+            Console.Clear();
 
-                Console.WriteLine("-- PROJETO CALCULADORA --");
-                Console.WriteLine(" ");
-                Console.WriteLine("1- Soma");
-                Console.WriteLine("2- Subtração");
-                Console.WriteLine("3- Divisão");
-                Console.WriteLine("4- Multiplicação");
-                Console.WriteLine("5- Exponenciação");
-                Console.WriteLine("6- Raiz quadrada");
-                Console.WriteLine("7- Bhaskara");
-                Console.WriteLine("8- Média entre números");
-                Console.WriteLine("0- Sair");
-                Console.WriteLine("S- Sobre");
-                Console.WriteLine(" ");
+            Console.WriteLine("-- PROJETO CALCULADORA --");
+            Console.WriteLine(" ");
+            Console.WriteLine("1- Soma");
+            Console.WriteLine("2- Subtração");
+            Console.WriteLine("3- Divisão");
+            Console.WriteLine("4- Multiplicação");
+            Console.WriteLine("5- Exponenciação");
+            Console.WriteLine("6- Raiz quadrada");
+            Console.WriteLine("7- Bhaskara");
+            Console.WriteLine("8- Média entre números");
+            Console.WriteLine("0- Sair");
+            Console.WriteLine("S- Sobre");
+            Console.WriteLine(" ");
 
-                Console.Write("Escolha uma opção: ");
-                opção = Console.ReadLine();
+            Console.Write("Escolha uma opção: ");
+            opção = Console.ReadLine();
 
-                switch (opção.ToUpper())
+            switch (opção.ToUpper())
             {
                 case "1":
 
-                ExibeSoma();
-                break;
+                    ExibeSoma();
+                    break;
 
                 case "2":
-    
-                ExibeSubtração();
-                break;
-            
+
+                    ExibeSubtração();
+                    break;
+
                 case "3":
-                
-                ExibeDivisão();
-                break;
+
+                    ExibeDivisão();
+                    break;
 
                 case "4":
-                
-                ExibeMultiplicação();
-                break;
+
+                    ExibeMultiplicação();
+                    break;
 
                 case "5":
-                
-                ExibeExponenciação();
-                break;
+
+                    ExibeExponenciação();
+                    break;
 
                 case "6":
-                
-                ExbibeRadiciação();
-                break;
+
+                    ExbibeRadiciação();
+                    break;
 
                 case "7":
 
-                ExibeBhaskara();
-                break;
+                    ExibeBhaskara();
+                    break;
 
                 case "8":
 
-                ExibeMedia();
-                break;
+                    ExibeMedia();
+                    break;
 
                 case "0":
 
-                ExibeSair();
-                break;
+                    ExibeSair();
+                    break;
 
                 case "S":
-                
-                ExibeSobre();
-                break;
+
+                    ExibeSobre();
+                    break;
 
                 default:
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Opção inválida!");
-                Console.ResetColor();
-                Environment.Exit(1);
-                break;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Opção inválida!");
+                    Console.ResetColor();
+                    Environment.Exit(1);
+                    break;
             }
         }
         static void ExibeSoma()
@@ -177,11 +179,11 @@ namespace retangulos
             Console.WriteLine("Digite os números que serão somados");
             Console.WriteLine(" ");
             Console.Write("Número 1: ");
-            nr1= int.Parse(Console.ReadLine());
+            nr1 = int.Parse(Console.ReadLine());
             Console.Write("Número 2: ");
-            nr2= int.Parse(Console.ReadLine());
+            nr2 = int.Parse(Console.ReadLine());
 
-            soma= nr1+nr2;
+            soma = nr1 + nr2;
 
             Console.WriteLine($"O resultado é: {soma}");
 
@@ -200,11 +202,11 @@ namespace retangulos
             Console.WriteLine("Digite os números que serão subtraidos");
             Console.WriteLine(" ");
             Console.Write("Número 1: ");
-            nr1= int.Parse(Console.ReadLine());
+            nr1 = int.Parse(Console.ReadLine());
             Console.Write("Número 2: ");
-            nr2= int.Parse(Console.ReadLine());
+            nr2 = int.Parse(Console.ReadLine());
 
-            Subtração= nr1-nr2;
+            Subtração = nr1 - nr2;
             Console.WriteLine($"O resultado é: {Subtração}");
 
             Console.WriteLine(" ");
@@ -221,11 +223,11 @@ namespace retangulos
             Console.WriteLine("Digite os números que serão divididos");
             Console.WriteLine(" ");
             Console.Write("Número 1: ");
-            nr1= int.Parse(Console.ReadLine());
+            nr1 = int.Parse(Console.ReadLine());
             Console.Write("Número 2: ");
-            nr2= int.Parse(Console.ReadLine());
+            nr2 = int.Parse(Console.ReadLine());
 
-            divisão= nr1/nr2;
+            divisão = nr1 / nr2;
             Console.WriteLine($"O resultado é: {divisão}");
 
             Console.WriteLine(" ");
@@ -242,11 +244,11 @@ namespace retangulos
             Console.WriteLine("Digite os números que serão multiplicados");
             Console.WriteLine(" ");
             Console.Write("Número 1: ");
-            nr1= int.Parse(Console.ReadLine());
+            nr1 = int.Parse(Console.ReadLine());
             Console.Write("Número 2: ");
-            nr2= int.Parse(Console.ReadLine());
+            nr2 = int.Parse(Console.ReadLine());
 
-            Multiplicação= nr1*nr2;
+            Multiplicação = nr1 * nr2;
             Console.WriteLine($"O resultado é: {Multiplicação}");
 
             Console.WriteLine(" ");
@@ -256,17 +258,17 @@ namespace retangulos
         }
         static void ExibeExponenciação()
         {
-            double Exponenciação,nro1, nro2;
+            double Exponenciação, nro1, nro2;
 
             Console.Clear();
             Console.WriteLine("--EXPONENCIAÇÃO--");
             Console.WriteLine("Digite: ");
             Console.Write("Base: ");
-            nro1= Convert.ToDouble(Console.ReadLine());
+            nro1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Expoente: ");
-            nro2= Convert.ToDouble(Console.ReadLine());
-                
-            Exponenciação= Math.Pow(nro1, nro2);
+            nro2 = Convert.ToDouble(Console.ReadLine());
+
+            Exponenciação = Math.Pow(nro1, nro2);
             Console.WriteLine($"O resultado é: {Exponenciação}");
 
             Console.WriteLine(" ");
@@ -276,15 +278,15 @@ namespace retangulos
         }
         static void ExbibeRadiciação()
         {
-            double Raiz,nro1;
+            double Raiz, nro1;
 
             Console.Clear();
             Console.WriteLine("--RAIZ QUADRADA--");
             Console.WriteLine("Digite: ");
             Console.Write("Número: ");
-            nro1= Convert.ToDouble(Console.ReadLine());
-                
-            Raiz= Math.Sqrt(nro1);
+            nro1 = Convert.ToDouble(Console.ReadLine());
+
+            Raiz = Math.Sqrt(nro1);
             Console.WriteLine($"O resultado é: {Raiz}");
 
             Console.WriteLine(" ");
@@ -294,31 +296,31 @@ namespace retangulos
         }
         static void ExibeBhaskara()
         {
-            string entrada1,entrada2,entrada3;
-            double A,B,C,delta,x1,x2;
+            string entrada1, entrada2, entrada3;
+            double A, B, C, delta, x1, x2;
 
             Console.Clear();
             Console.WriteLine("--BHASKARA--");
             Console.Write("Valor A: ");
-            entrada1= Console.ReadLine();
-            A= Convert.ToDouble(entrada1);
+            entrada1 = Console.ReadLine();
+            A = Convert.ToDouble(entrada1);
             Console.Write("Valor B: ");
-            entrada2= Console.ReadLine();
-            B= Convert.ToDouble(entrada2);
+            entrada2 = Console.ReadLine();
+            B = Convert.ToDouble(entrada2);
             Console.Write("Valor C: ");
-            entrada3= Console.ReadLine();
-            C= Convert.ToDouble(entrada3);
-            
-            delta= B*B - 4*A*C;
-            x1= (-B + Math.Sqrt(delta)) / (2*A);
-            x2= (-B - Math.Sqrt(delta)) / (2*A);
-            
-            if (A<=0)
+            entrada3 = Console.ReadLine();
+            C = Convert.ToDouble(entrada3);
+
+            delta = B * B - 4 * A * C;
+            x1 = (-B + Math.Sqrt(delta)) / (2 * A);
+            x2 = (-B - Math.Sqrt(delta)) / (2 * A);
+
+            if (A <= 0)
             {
                 Console.WriteLine("Não é uma equação de segundo grau.");
             }
 
-            else if(delta < 0)
+            else if (delta < 0)
             {
                 Console.WriteLine($"Como delta = {delta}, a equação não possui raízes reais");
             }
@@ -345,8 +347,8 @@ namespace retangulos
             Console.Write("Número 2: ");
             nro2 = Convert.ToDecimal(Console.ReadLine());
 
-            Media= (nro1+nro2) / 2;
-            
+            Media = (nro1 + nro2) / 2;
+
             Console.WriteLine($"O resultado é {Media:N1}");
 
             Console.WriteLine(" ");
@@ -355,28 +357,24 @@ namespace retangulos
             Console.ReadKey();
 
         }
-        static void ExibeSair()
+        static bool ExibeSair()
         {
             string saida;
-            
+
             Console.Clear();
             Console.WriteLine("Deseja sair do programa?");
             Console.WriteLine("S-Sim || N-Não");
             Console.Write("Escolha uma opção: ");
             saida = Console.ReadLine();
-            
-             switch (saida.ToUpper())
+
+            switch (saida.ToUpper())
             {
                 case "S":
-    
-                Console.WriteLine("Obrigada por utilizar nosso programa!");
-                Environment.Exit(0);
-                break;
-            
-                case "N":
-
-                ExibeOpções();
-                break;
+                    Console.WriteLine("Obrigada por utilizar nosso programa!");
+                    return true;
+                default:
+                    ExibeOpções();
+                    return false;
             }
         }
         static void ExibeSobre()
@@ -391,5 +389,5 @@ namespace retangulos
             Console.Write("Pressione uma tecla para continuar");
             Console.ReadKey();
         }
-    }         
+    }
 }
